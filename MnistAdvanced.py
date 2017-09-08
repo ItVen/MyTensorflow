@@ -55,7 +55,7 @@ train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 
 for i in range(1000):
 	# 加载50个训练样本
-	batch = mnist.train.next_batch(50)
+	batch = mnist.train.next_batch(150)
 	# 并通过feed_dict将x 和 y_张量占位符用训练训练数据替代。
 	train_step.run(feed_dict ={x:batch[0],y_:batch[1]})
 
